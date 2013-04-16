@@ -22,6 +22,7 @@
             </Stroke>
           </LineSymbolizer>
         </Rule>
+
         <Rule>
           <Filter xmlns="http://www.opengis.net/ogc">
             <Or>
