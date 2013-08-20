@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:gml="http://www.opengis.net/gml"
+xmlns:topp="http://www.openplans.org/topp"
+targetNamespace="http://www.openplans.org/topp"
+elementFormDefault="qualified">
+
+	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
+
+	<xsd:complexType name="Disasters_Hazards_Crises0Type">
+		<xsd:complexContent>
+			<xsd:extension base="gml:AbstractFeatureType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="0" name="the_geom" nillable="true" type="gml:PointPropertyType"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Type" nillable="true">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Cold wave"/>
+								<xsd:enumeration value="Cyclone"/>
+								<xsd:enumeration value="Drought"/>
+								<xsd:enumeration value="Earthquake"/>
+								<xsd:enumeration value="Epidemic"/>
+								<xsd:enumeration value="Fire"/>
+								<xsd:enumeration value="Flash flood"/>
+								<xsd:enumeration value="Flood"/>
+								<xsd:enumeration value="Heatwave"/>
+								<xsd:enumeration value="Heavy rain"/>
+								<xsd:enumeration value="Insect infestation"/>
+								<xsd:enumeration value="Landslide-Mudslide"/>
+								<xsd:enumeration value="Locust infestation"/>
+								<xsd:enumeration value="Snow avalanche"/>
+								<xsd:enumeration value="Snowfall"/>
+								<xsd:enumeration value="Storm"/>
+								<xsd:enumeration value="Storm surge"/>
+								<xsd:enumeration value="Technological disaster"/>
+								<xsd:enumeration value="Tornado"/>
+								<xsd:enumeration value="Tsunami"/>
+								<xsd:enumeration value="Violent wind"/>
+								<xsd:enumeration value="Volcano"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Date" nillable="true" type="xsd:dateTime"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Name" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Comments" nillable="true" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

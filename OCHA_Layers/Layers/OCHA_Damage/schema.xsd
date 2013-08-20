@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:gml="http://www.opengis.net/gml"
+xmlns:topp="http://www.openplans.org/topp"
+targetNamespace="http://www.openplans.org/topp"
+elementFormDefault="qualified">
+
+	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
+
+	<xsd:complexType name="DamageType">
+		<xsd:complexContent>
+			<xsd:extension base="gml:AbstractFeatureType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="0" name="the_geom" nillable="true" type="gml:PointPropertyType"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Type" nillable="true">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Damaged-Affected"/>
+								<xsd:enumeration value="Destroyed"/>
+								<xsd:enumeration value="Not affected"/>
+								<xsd:enumeration value="Airport affected"/>
+								<xsd:enumeration value="Airport destroyed"/>
+								<xsd:enumeration value="Airport not affected"/>
+								<xsd:enumeration value="Bridge affected"/>
+								<xsd:enumeration value="Bridge destroyed"/>
+								<xsd:enumeration value="Bridge not affected"/>
+								<xsd:enumeration value="Building affected"/>
+								<xsd:enumeration value="Building destroyed"/>
+								<xsd:enumeration value="Building not affected"/>
+								<xsd:enumeration value="House affected"/>
+								<xsd:enumeration value="House destroyed"/>
+								<xsd:enumeration value="House not affected"/>
+								<xsd:enumeration value="Port affected"/>
+								<xsd:enumeration value="Port destroyed"/>
+								<xsd:enumeration value="Port not affected"/>
+								<xsd:enumeration value="Road affected"/>
+								<xsd:enumeration value="Road destroyed"/>
+								<xsd:enumeration value="Road not affected"/>
+								<xsd:enumeration value="School affected"/>
+								<xsd:enumeration value="School destroyed"/>
+								<xsd:enumeration value="School not affected"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Date" nillable="true" type="xsd:dateTime"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Name" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Condition" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="Comments" nillable="true" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>
