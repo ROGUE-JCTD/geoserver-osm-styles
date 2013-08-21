@@ -41,7 +41,7 @@
           <PointSymbolizer>
             <Graphic>
               <ExternalGraphic>
-                <OnlineResource xlink:href="../rogue_symbols/triage.png" xlink:type="simple"/>
+                <OnlineResource xlink:href="../rogue_symbols/crisis_other_triage_100px.png" xlink:type="simple"/>
                 <Format>image/png</Format>
               </ExternalGraphic>
               <Size>16</Size>
