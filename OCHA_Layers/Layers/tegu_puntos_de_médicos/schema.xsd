@@ -8,7 +8,7 @@ elementFormDefault="qualified">
 
 	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
 
-	<xsd:complexType name="localizaciones_de_primeros_auxilios_de_copecoType">
+	<xsd:complexType name="tegu_puntos_de_médicosType">
 		<xsd:complexContent>
 			<xsd:extension base="gml:AbstractFeatureType">
 				<xsd:sequence>
