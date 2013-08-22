@@ -12,20 +12,6 @@
             }
     },
     {
-        "name":"centros_médico",
-        "filter":
-            {
-                "amenity":["hospital","clinic"]
-            },
-        "fields":
-            {
-                "name":{"name":"nombre", "type":"STRING"},
-                "amenity":{"name":"amenidad", "type":"STRING"}, 
-                "geom":{"name":"localización", "type":"POINT"},
-                "estado_de_disponibilidad":{"name":"estado_de_disponibilidad", "type":"STRING"}
-            }
-    },
-    {
         "name":"helipuertos",
         "filter":
             {
