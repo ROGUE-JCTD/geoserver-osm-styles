@@ -1,0 +1,68 @@
+{"rules":[
+    {
+        "name":"estaciones_de_policía",
+        "filter":
+            {
+                "amenity":["police"]
+            },
+        "fields":
+            {
+                "name":{"name":"nombre", "type":"STRING"},
+                "geom":{"name":"localización", "type":"POINT"}
+            }
+    },
+    {
+        "name":"centros_médico",
+        "filter":
+            {
+                "amenity":["hospital","clinic"]
+            },
+        "fields":
+            {
+                "name":{"name":"nombre", "type":"STRING"},
+                "amenity":{"name":"amenidad", "type":"STRING"}, 
+                "geom":{"name":"localización", "type":"POINT"},
+                "estado_de_disponibilidad":{"name":"estado_de_disponibilidad", "type":"STRING"}
+            }
+    },
+    {
+        "name":"helipuertos",
+        "filter":
+            {
+                "aeroway":["helipad"]
+            },
+        "fields":
+            {
+                "name":{"name":"nombre", "type":"STRING"},
+                "geom":{"name":"localización", "type":"POINT"}
+            }
+    },
+    {
+        "name":"edificios",
+        "filter":
+            {
+                "building":[]
+            },
+        "fields":
+            {
+                "name":{"name":"nombre", "type":"STRING"},
+                "addr:housenumber":{"name":"numero_de_case", "type":"STRING"},
+                "addr:housename":{"name":"numbre_de_la_casa", "type":"STRING"},
+                "addr:street":{"name":"addr_street", "type":"STRING"},
+                "amenity":{"name":"amenidad", "type":"STRING"}, 
+                "geom":{"name":"localización", "type":"MULTIPOLYGON"}
+            }
+    },
+    {
+        "name":"estaciones_de_bomberos",
+        "filter":
+            {
+                "amenity":["fire_station"]
+            },
+        "fields":
+            {
+                "name":{"name":"nombre", "type":"STRING"},
+                "geom":{"name":"localización", "type":"POINT"}
+            }
+    }
+]}

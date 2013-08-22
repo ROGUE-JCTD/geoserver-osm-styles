@@ -18,6 +18,8 @@ elementFormDefault="qualified">
 					<xsd:element maxOccurs="1" minOccurs="0" name="tipo" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
+                            					<xsd:enumeration value="hospital"/>
+                                				<xsd:enumeration value="clinica"/>
                                 				<xsd:enumeration value="primeros_auxilios"/>
                                 				<xsd:enumeration value="triage"/>
                             				</xsd:restriction>
@@ -28,6 +30,14 @@ elementFormDefault="qualified">
                             				<xsd:restriction base="xsd:string">
                                 				<xsd:enumeration value="activo"/>
                                 				<xsd:enumeration value="inactivo"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                    			</xsd:element>
+                    			<xsd:element maxOccurs="1" minOccurs="0" name="estado_disponidad" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="disponible"/>
+                                				<xsd:enumeration value="cerrado"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
                     			</xsd:element>
