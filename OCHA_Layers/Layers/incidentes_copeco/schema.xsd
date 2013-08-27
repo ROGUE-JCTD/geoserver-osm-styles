@@ -13,29 +13,7 @@ elementFormDefault="qualified">
 			<xsd:extension base="gml:AbstractFeatureType">
 				<xsd:sequence>
 					<xsd:element maxOccurs="1" minOccurs="0" name="fecha_hora" nillable="true" type="xsd:dateTime"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="nivel_de_prioridad" nillable="true">
-						<xsd:simpleType>
-                            				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="alto"/>
-                                				<xsd:enumeration value="medio"/>
-                                				<xsd:enumeration value="bajo"/>
-                            				</xsd:restriction>
-                        			</xsd:simpleType>
-                        		</xsd:element>
-					<xsd:element maxOccurs="1" minOccurs="0" name="localización" nillable="true" type="gml:PointPropertyType"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="municipio" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="estado" nillable="true">
-						<xsd:simpleType>
-                            				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="activo"/>
-                                				<xsd:enumeration value="inactivo"/>
-                            				</xsd:restriction>
-                        			</xsd:simpleType>
-                        		</xsd:element>
-					<xsd:element maxOccurs="1" minOccurs="0" name="departamento" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="aldea" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="comunidad" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="intersección" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="lugar" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="evento" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
@@ -45,12 +23,39 @@ elementFormDefault="qualified">
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-					<xsd:element maxOccurs="1" minOccurs="0" name="situacion_presentada" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="nivel_de_prioridad" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="alto"/>
+                                				<xsd:enumeration value="medio"/>
+                                				<xsd:enumeration value="bajo"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="situacion_actual" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="pendiente"/>
+                                				<xsd:enumeration value="en_proceso"/>
+                                				<xsd:enumeration value="finalizado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="accion_tomadas" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="barrio" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="colonia" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="aldea" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="caserio" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="municipio" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="departamento" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="dirección" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="quien_reporta" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="telefono" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="quien_tomo_el_mensaje" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="institucion_que_representa" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="accion_a_tomar" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="comentarios" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="fotos" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="ubicación" nillable="true" type="gml:PointPropertyType"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>

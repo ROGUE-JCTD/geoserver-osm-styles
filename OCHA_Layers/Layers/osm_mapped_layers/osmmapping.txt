@@ -1,29 +1,5 @@
 {"rules":[
     {
-        "name":"estaciones_de_policía",
-        "filter":
-            {
-                "amenity":["police"]
-            },
-        "fields":
-            {
-                "name":{"name":"nombre", "type":"STRING"},
-                "geom":{"name":"localización", "type":"POINT"}
-            }
-    },
-    {
-        "name":"helipuertos",
-        "filter":
-            {
-                "aeroway":["helipad"]
-            },
-        "fields":
-            {
-                "name":{"name":"nombre", "type":"STRING"},
-                "geom":{"name":"localización", "type":"POINT"}
-            }
-    },
-    {
         "name":"edificios",
         "filter":
             {
@@ -37,18 +13,6 @@
                 "addr:street":{"name":"addr_street", "type":"STRING"},
                 "amenity":{"name":"amenidad", "type":"STRING"}, 
                 "geom":{"name":"localización", "type":"MULTIPOLYGON"}
-            }
-    },
-    {
-        "name":"estaciones_de_bomberos",
-        "filter":
-            {
-                "amenity":["fire_station"]
-            },
-        "fields":
-            {
-                "name":{"name":"nombre", "type":"STRING"},
-                "geom":{"name":"localización", "type":"POINT"}
             }
     }
 ]}
