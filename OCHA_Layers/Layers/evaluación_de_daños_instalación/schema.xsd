@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:gml="http://www.opengis.net/gml"
+xmlns:topp="http://www.openplans.org/topp"
+targetNamespace="http://www.openplans.org/topp"
+elementFormDefault="qualified">
+
+	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
+
+	<xsd:complexType name="evaluación_de_daños_instalaciónType">
+		<xsd:complexContent>
+			<xsd:extension base="gml:AbstractFeatureType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="0" name="nombre_de_inmueble" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="sección_de_edificio_afectado" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="piso_o_pisos" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="daños_en_el_techo_medida" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="menor"/>
+                                				<xsd:enumeration value="moderada"/>
+                                				<xsd:enumeration value="grave"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="pared_de_extensión_de_la_avería" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="menor"/>
+                                				<xsd:enumeration value="moderada"/>
+                                				<xsd:enumeration value="grave"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="entrada_de_extensión_de_la_avería" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="menor"/>
+                                				<xsd:enumeration value="moderada"/>
+                                				<xsd:enumeration value="grave"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+					<xsd:element maxOccurs="1" minOccurs="0" name="entrada_bloqueado" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="no"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="riesgo_eléctrico" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="no"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="obstáculo_de_agua" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="no"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="otros_daños" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="no"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="comentarios" nillable="true" type="xsd:string"/>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="fotos" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="ubicación" nillable="true" type="gml:PointPropertyType"/>					
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

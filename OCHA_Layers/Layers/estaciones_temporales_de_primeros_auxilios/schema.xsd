@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:gml="http://www.opengis.net/gml"
+xmlns:topp="http://www.openplans.org/topp"
+targetNamespace="http://www.openplans.org/topp"
+elementFormDefault="qualified">
+
+	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
+
+	<xsd:complexType name="estaciones_temporales_de_primeros_auxiliosType">
+		<xsd:complexContent>
+			<xsd:extension base="gml:AbstractFeatureType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="número_de_médicos" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="estado" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="activo"/>
+                                				<xsd:enumeration value="inactivo"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+					<xsd:element maxOccurs="1" minOccurs="0" name="triaje" nillable="true">
+						<xsd:simpleType>
+                            				<xsd:restriction base="xsd:string">
+                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="no"/>
+                                				<xsd:enumeration value="no especificado"/>
+                            				</xsd:restriction>
+                        			</xsd:simpleType>
+                        		</xsd:element>
+					<xsd:element maxOccurs="1" minOccurs="0" name="comentarios" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="fotos" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="ubicación" nillable="true" type="gml:PointPropertyType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

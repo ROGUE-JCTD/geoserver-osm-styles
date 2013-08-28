@@ -1,0 +1,18 @@
+{"rules":[
+    {
+        "name":"edificios",
+        "filter":
+            {
+                "building":[]
+            },
+        "fields":
+            {
+                "name":{"name":"nombre", "type":"STRING"},
+                "addr:housenumber":{"name":"numero_de_case", "type":"STRING"},
+                "addr:housename":{"name":"numbre_de_la_casa", "type":"STRING"},
+                "addr:street":{"name":"addr_street", "type":"STRING"},
+                "amenity":{"name":"amenidad", "type":"STRING"}, 
+                "geom":{"name":"localización", "type":"MULTIPOLYGON"}
+            }
+    }
+]}

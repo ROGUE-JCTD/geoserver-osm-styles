@@ -8,33 +8,34 @@ elementFormDefault="qualified">
 
 	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
 
-	<xsd:complexType name="localizaciones_de_primeros_auxilios_de_copecoType">
+	<xsd:complexType name="centros_médicosType">
 		<xsd:complexContent>
 			<xsd:extension base="gml:AbstractFeatureType">
 				<xsd:sequence>
 					<xsd:element maxOccurs="1" minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="número_de_médicos" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="localización" nillable="true" type="gml:PointPropertyType"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="tipo" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="primeros_auxilios"/>
-                                				<xsd:enumeration value="triage"/>
-                                				<xsd:enumeration value="emergencia_helipuerto"/>
+                                				<xsd:enumeration value="hospital"/>
+                                				<xsd:enumeration value="clinica"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
-                    			</xsd:element>
-					<xsd:element maxOccurs="1" minOccurs="0" name="estado" nillable="true">
+                        		</xsd:element>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="tipo_de_médicos" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="estado_de_la_capacidad" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="activo"/>
-                                				<xsd:enumeration value="inactivo"/>
+                                				<xsd:enumeration value="abierto"/>
+                                				<xsd:enumeration value="cerrado"/>
+                                				<xsd:enumeration value="no especificado"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
-                    			</xsd:element>
+                        		</xsd:element>
+					<xsd:element maxOccurs="1" minOccurs="0" name="comentarios" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="ubicación" nillable="true" type="gml:PointPropertyType"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
 </xsd:schema>
-
