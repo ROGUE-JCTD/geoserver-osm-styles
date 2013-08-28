@@ -5,7 +5,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <NamedLayer>
-    <Name>Indidentes_COPECO</Name>
+    <Name>Indidentes_copeco</Name>
     <UserStyle>
       <FeatureTypeStyle>
         
@@ -44,7 +44,7 @@
                 <OnlineResource xlink:href="../rogue_symbols/security_ambulance_incident_100px.png" xlink:type="simple"/>
                 <Format>image/png</Format>
               </ExternalGraphic>
-              <Size>25</Size>
+              <Size>20</Size>
             </Graphic>
           </PointSymbolizer>
         </Rule>
