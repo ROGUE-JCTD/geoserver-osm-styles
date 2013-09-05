@@ -20,6 +20,8 @@ elementFormDefault="qualified">
                                 				<xsd:enumeration value="nino perdido"/>
                                 				<xsd:enumeration value="accidente ambulancia"/>
                                 				<xsd:enumeration value="incidente de trafico"/>
+                                				<xsd:enumeration value="danos y perjuicios"/>
+                                				<xsd:enumeration value="otro"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
