@@ -13,7 +13,7 @@ elementFormDefault="qualified">
 			<xsd:extension base="gml:AbstractFeatureType">
 				<xsd:sequence>
 					<xsd:element maxOccurs="1" minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="número_de_médicos" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="numero_de_medicos" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="estado" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
@@ -26,7 +26,7 @@ elementFormDefault="qualified">
 					<xsd:element maxOccurs="1" minOccurs="0" name="triaje" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="si"/>
                                 				<xsd:enumeration value="no"/>
                                 				<xsd:enumeration value="no especificado"/>
                             				</xsd:restriction>

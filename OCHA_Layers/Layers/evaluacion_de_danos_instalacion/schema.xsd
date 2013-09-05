@@ -8,14 +8,14 @@ elementFormDefault="qualified">
 
 	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
 
-	<xsd:complexType name="evaluación_de_daños_instalaciónType">
+	<xsd:complexType name="evaluacion_de_danos_instalacionType">
 		<xsd:complexContent>
 			<xsd:extension base="gml:AbstractFeatureType">
 				<xsd:sequence>
 					<xsd:element maxOccurs="1" minOccurs="0" name="nombre_de_inmueble" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="sección_de_edificio_afectado" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="seccion_de_edificio_afectado" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="piso_o_pisos" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="daños_en_el_techo_medida" nillable="true">
+					<xsd:element maxOccurs="1" minOccurs="0" name="danos_en_el_techo_medida" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
                                 				<xsd:enumeration value="menor"/>
@@ -25,7 +25,7 @@ elementFormDefault="qualified">
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-                        		<xsd:element maxOccurs="1" minOccurs="0" name="pared_de_extensión_de_la_avería" nillable="true">
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="pared_de_extension_de_la_averia" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
                                 				<xsd:enumeration value="menor"/>
@@ -35,7 +35,7 @@ elementFormDefault="qualified">
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-                        		<xsd:element maxOccurs="1" minOccurs="0" name="entrada_de_extensión_de_la_avería" nillable="true">
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="entrada_de_extension_de_la_averia" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
                                 				<xsd:enumeration value="menor"/>
@@ -48,34 +48,34 @@ elementFormDefault="qualified">
 					<xsd:element maxOccurs="1" minOccurs="0" name="entrada_bloqueado" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="si"/>
                                 				<xsd:enumeration value="no"/>
                                 				<xsd:enumeration value="no especificado"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-                        		<xsd:element maxOccurs="1" minOccurs="0" name="riesgo_eléctrico" nillable="true">
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="riesgo_electrico" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="si"/>
                                 				<xsd:enumeration value="no"/>
                                 				<xsd:enumeration value="no especificado"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-                        		<xsd:element maxOccurs="1" minOccurs="0" name="obstáculo_de_agua" nillable="true">
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="obstaculo_de_agua" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="si"/>
                                 				<xsd:enumeration value="no"/>
                                 				<xsd:enumeration value="no especificado"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-                        		<xsd:element maxOccurs="1" minOccurs="0" name="otros_daños" nillable="true">
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="otros_danos" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="si"/>
                                 				<xsd:enumeration value="no"/>
                                 				<xsd:enumeration value="no especificado"/>
                             				</xsd:restriction>

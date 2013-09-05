@@ -8,7 +8,7 @@ elementFormDefault="qualified">
 
 	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
 
-	<xsd:complexType name="zonas_de_aterrizaje_de_helicópterosType">
+	<xsd:complexType name="zonas_de_aterrizaje_de_helicopterosType">
 		<xsd:complexContent>
 			<xsd:extension base="gml:AbstractFeatureType">
 				<xsd:sequence>
@@ -22,17 +22,17 @@ elementFormDefault="qualified">
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-                        		<xsd:element maxOccurs="1" minOccurs="0" name="obstrucción" nillable="true">
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="obstruccion" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="sí"/>
+                                				<xsd:enumeration value="si"/>
                                 				<xsd:enumeration value="no"/>
                                 				<xsd:enumeration value="no especificado"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-                        		<xsd:element maxOccurs="1" minOccurs="0" name="descripción" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="dirección_de_aproximación" nillable="true">
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="descripcion" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="direccion_de_aproximacion" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
                                 				<xsd:enumeration value="norte"/>

@@ -17,9 +17,9 @@ elementFormDefault="qualified">
 					<xsd:element maxOccurs="1" minOccurs="0" name="evento" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
-                                				<xsd:enumeration value="niño perdido"/>
+                                				<xsd:enumeration value="nino perdido"/>
                                 				<xsd:enumeration value="accidente ambulancia"/>
-                                				<xsd:enumeration value="incidente de tráfico"/>
+                                				<xsd:enumeration value="incidente de trafico"/>
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
@@ -48,7 +48,7 @@ elementFormDefault="qualified">
 					<xsd:element maxOccurs="1" minOccurs="0" name="caserio" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="municipio" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="departamento" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="dirección" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="direccion" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="quien_reporta" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="telefono" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="quien_tomo_el_mensaje" nillable="true" type="xsd:string"/>

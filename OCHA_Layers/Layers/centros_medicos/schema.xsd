@@ -8,12 +8,12 @@ elementFormDefault="qualified">
 
 	<xsd:import namespace="http://www.opengis.net/gml" schemaLocation="http://localhost:8080/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
 
-	<xsd:complexType name="centros_médicosType">
+	<xsd:complexType name="centros_medicosType">
 		<xsd:complexContent>
 			<xsd:extension base="gml:AbstractFeatureType">
 				<xsd:sequence>
 					<xsd:element maxOccurs="1" minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
-					<xsd:element maxOccurs="1" minOccurs="0" name="número_de_médicos" nillable="true" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="numero_de_medicos" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="tipo" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
@@ -22,7 +22,7 @@ elementFormDefault="qualified">
                             				</xsd:restriction>
                         			</xsd:simpleType>
                         		</xsd:element>
-                        		<xsd:element maxOccurs="1" minOccurs="0" name="tipo_de_médicos" nillable="true" type="xsd:string"/>
+                        		<xsd:element maxOccurs="1" minOccurs="0" name="tipo_de_medicos" nillable="true" type="xsd:string"/>
 					<xsd:element maxOccurs="1" minOccurs="0" name="estado_de_la_capacidad" nillable="true">
 						<xsd:simpleType>
                             				<xsd:restriction base="xsd:string">
